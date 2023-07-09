@@ -19,6 +19,7 @@ perl_version 5.008;
 readme_from 'Address.pm';
 recursive_author_tests('xt');
 requires 'Class::Utils' => 0;
+requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-Random-OFN-Address/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-Random-OFN-Address';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Data-Random-OFN-Address';
