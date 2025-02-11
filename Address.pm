@@ -6,6 +6,7 @@ use warnings;
 use Class::Utils qw(set_params);
 use Data::OFN::Address;
 use Data::Text::Simple;
+use Mo::utils 0.06 qw(check_bool);
 use Readonly;
 use Test::Shared::Fixture::Data::OFN::Address::Place;
 use Test::Shared::Fixture::Data::OFN::Address::String;
@@ -49,6 +50,9 @@ sub new {
 
 	# Process parameters.
 	set_params($self, @params);
+
+	check_bool($self, 'mode_address_place');
+	check_bool($self, 'mode_ofn_examples');
 
 	return $self;
 }

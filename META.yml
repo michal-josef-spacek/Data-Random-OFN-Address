@@ -25,6 +25,7 @@ requires:
   Class::Utils: 0
   Data::OFN::Address: 0
   Data::Text::Simple: 0
+  Mo::utils: 0.06
   Readonly: 0
   Test::Shared::Fixture::Data::OFN::Address::Place: 0
   Test::Shared::Fixture::Data::OFN::Address::String: 0

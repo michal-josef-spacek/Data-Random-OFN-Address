@@ -21,6 +21,7 @@ recursive_author_tests('xt');
 requires 'Class::Utils' => 0;
 requires 'Data::OFN::Address' => 0;
 requires 'Data::Text::Simple' => 0;
+requires 'Mo::utils' => 0.06;
 requires 'Readonly' => 0;
 requires 'Test::Shared::Fixture::Data::OFN::Address::Place' => 0;
 requires 'Test::Shared::Fixture::Data::OFN::Address::String' => 0;
