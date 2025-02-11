@@ -7,6 +7,9 @@ use Class::Utils qw(set_params);
 use Data::OFN::Address;
 use Data::Text::Simple;
 use Readonly;
+use Test::Shared::Fixture::Data::OFN::Address::Place;
+use Test::Shared::Fixture::Data::OFN::Address::String;
+use Test::Shared::Fixture::Data::OFN::Address::Struct;
 use Unicode::UTF8 qw(decode_utf8);
 
 Readonly::Array our @MUNICIPALITIES => (
@@ -87,38 +90,14 @@ sub _ofn_examples {
 	my $self = shift;
 
 	return (
-		Data::OFN::Address->new(
-			'address_place' => 'https://linked.cuzk.cz/resource/ruian/adresni-misto/16135661',
+		Test::Shared::Fixture::Data::OFN::Address::Place->new(
 			'id' => $self->{'cb_id'}->(),
 		),
-		Data::OFN::Address->new(
-			'house_number' => 12,
-			'house_number_type' => decode_utf8('č.p.'),
+		Test::Shared::Fixture::Data::OFN::Address::String->new(
 			'id' => $self->{'cb_id'}->(),
-			'municipality_name' => [
-				Data::Text::Simple->new(
-					'lang' => 'cs',
-					'text' => decode_utf8('Horní Datová'),
-				),
-			],
-			# XXX not standard, what about it?
-			'note' => decode_utf8('dole u řeky'),
-			'psc' => '33101',
-			'street_name' => [
-				Data::Text::Simple->new(
-					'lang' => 'cs',
-					'text' => decode_utf8('Hlavní'),
-				),
-			],
 		),
-		Data::OFN::Address->new(
+		Test::Shared::Fixture::Data::OFN::Address::Struct->new(
 			'id' => $self->{'cb_id'}->(),
-			'text' => [
-				Data::Text::Simple->new(
-					'lang' => 'cs',
-					'text' => decode_utf8('Pod Panskou strání 262/12, Chvojkonosy, 33205 Lysostírky'),
-				),
-			],
 		),
 	);
 }
