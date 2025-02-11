@@ -23,10 +23,13 @@ no_index:
     - xt
 requires:
   Class::Utils: 0
+  Data::OFN::Address: 0
+  Data::Text::Simple: 0
   Readonly: 0
   Test::Shared::Fixture::Data::OFN::Address::Place: 0
   Test::Shared::Fixture::Data::OFN::Address::String: 0
   Test::Shared::Fixture::Data::OFN::Address::Struct: 0
+  Unicode::UTF8: 0
   perl: 5.8.0
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Data-Random-OFN-Address/issues
